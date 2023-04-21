@@ -118,7 +118,7 @@ input {
   width: 226px;
 }
 .task__input {
-  width: 226px
+  width: 226px;
 }
 .delete__img {
   height: 2em;
@@ -138,13 +138,13 @@ input {
 
 /* Edit Task */
 .task__input {
-  display:none
+  display:none;
 }
 
 .task_add-new .task__input,
 .task_edit .task__input {
   display:inline-block;
-  width:224px
+  width:224px;
 }
 
 .task_edit .task__label {
