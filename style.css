@@ -144,7 +144,8 @@ input {
 }
 
 /* Completed */
-.task-group_complete .task__label {
+.task-group_complete
+.task__label {
   text-decoration: line-through;
   color: #888;
 }
@@ -154,12 +155,15 @@ input {
   display: none;
 }
 
-.task_add-new .task__input,
-.task_edit .task__input {
+.task_add-new
+.task__input,
+.task_edit
+.task__input {
   display: inline-block;
   width: 224px;
 }
 
-.task_edit .task__label {
+.task_edit
+.task__label {
   display: none;
 }
