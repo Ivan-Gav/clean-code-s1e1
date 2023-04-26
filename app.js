@@ -10,8 +10,8 @@
 
 var taskInput=document.querySelector(".task__input_add-new");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.querySelector(".task-group_incomplete");//ul of #incompleteTasks
-var completedTasksHolder=document.querySelector(".task-group_complete");//completed-tasks
+var incompleteTaskHolder=document.querySelector(".task-group_status_incomplete");//ul of #incompleteTasks
+var completedTasksHolder=document.querySelector(".task-group_status_complete");//completed-tasks
 
 
 //New task list item
@@ -45,13 +45,13 @@ var createNewTaskElement=function(taskString){
 
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
   editButton.className="btn";
-  editButton.classList.add("btn_edit")
+  editButton.classList.add("btn_type_edit")
 
   deleteButton.className="btn";
-  deleteButton.classList.add("btn_delete")
+  deleteButton.classList.add("btn_type_delete")
   deleteButtonImg.src="./remove.svg";
   deleteButtonImg.alt="delete"
-  deleteButtonImg.className="delete__img"
+  deleteButtonImg.className="btn__delete-img"
   deleteButton.appendChild(deleteButtonImg);
 
 
@@ -91,7 +91,7 @@ var editTask=function(){
 
   var editInput=listItem.querySelector("input[type=text]");
   var label=listItem.querySelector("label");
-  var editBtn=listItem.querySelector(".btn_edit");
+  var editBtn=listItem.querySelector(".btn_type_edit");
   var containsClass=listItem.classList.contains("task_edit");
   //If class of the parent is .editmode
   if(containsClass){
@@ -163,8 +163,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
   console.log("bind list item events");
 //select ListItems children
   var checkBox=taskListItem.querySelector(".task__checkbox");
-  var editButton=taskListItem.querySelector(".btn_edit");
-  var deleteButton=taskListItem.querySelector(".btn_delete");
+  var editButton=taskListItem.querySelector(".btn_type_edit");
+  var deleteButton=taskListItem.querySelector(".btn_type_delete");
 
 
   //Bind editTask to edit button.
